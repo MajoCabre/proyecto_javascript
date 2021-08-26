@@ -1,0 +1,17 @@
+{
+  "name": "proyecto-js",
+  "version": "1.0.0",
+  "description": "proyecto de javascript",
+  "main": "carrito.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss SCSS/estilos.scss CSS/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Maria Jose",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

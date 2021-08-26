@@ -1,0 +1,404 @@
+/*-----------------Colores-----------------*/
+/*-----------------Estilos de letras-----------------*/
+html {
+  height: 100%; }
+
+body {
+  background-color: #eaceb4;
+  margin: 0;
+  min-height: 100%; }
+
+.carrito {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px; }
+
+.carrito img {
+  width: 60px; }
+
+.imagen_central {
+  display: flex;
+  justify-content: center; }
+
+.imagen_central img {
+  height: 350px; }
+
+header {
+  display: flex;
+  justify-content: space-evenly; }
+
+header h3 {
+  margin-top: 0; }
+
+header a {
+  font-family: "Style Script", cursive;
+  font-size: 40px;
+  color: #ffffff;
+  text-decoration: none; }
+
+header a:hover {
+  color: #6a687a;
+  text-decoration: underline; }
+
+.contenedor_img {
+  display: flex;
+  justify-content: space-around; }
+
+.contenedor_img img {
+  width: 400px;
+  height: 380px;
+  margin: 10px 0 15px 0;
+  border-radius: 10px; }
+
+.about_me {
+  color: #ffffff; }
+
+.about_me h2 {
+  font-family: "Style Script", cursive;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 20px; }
+
+.about_me p {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin: 0 25px 20px 25px; }
+
+.container_torta {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; }
+
+.chocotorta {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin-bottom: 15px; }
+
+.texto_torta {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.texto_torta h3 {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Montserrat";
+  margin-left: 15px; }
+
+#chocotortaSelect {
+  margin-left: 15px;
+  padding: 10px 40px 10px 40px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #eaceb4;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #6a687a;
+  border: 2px solid #6a687a; }
+
+#chocotortaSelect:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#chocotortaPriceButton {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4;
+  border: 2px solid #6a687a; }
+
+#chocotortaPriceButton:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#chocotortaPriceProductSelected {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 0; }
+
+.container-button {
+  display: flex;
+  flex-direction: row; }
+
+.carritoBoton {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4;
+  border: 2px solid #6a687a; }
+
+.carritoBoton:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#listCarrito {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  flex-direction: column; }
+
+#carritoVacio {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 0; }
+
+.redvelvet {
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin: 10px 0 15px 5px; }
+
+#redvelvetProductSelect {
+  margin-left: 15px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #eaceb4;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #6a687a;
+  border: 2px solid #6a687a; }
+
+#redvelvetProductSelect:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#redvelvetPriceButton {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4;
+  border: 2px solid #6a687a; }
+
+#redvelvetPriceButton:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#redvelvetPriceProductSelected {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 0; }
+
+.banana {
+  width: 420px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin: 10px 25px 15px 0; }
+
+#bananaProductSelect {
+  margin-left: 15px;
+  padding: 10px 40px 10px 40px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #eaceb4;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #6a687a;
+  border: 2px solid #6a687a; }
+
+#bananaProductSelect:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#bananaPriceButton {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #6a687a;
+  border: 2px solid #6a687a; }
+
+#bananaPriceButton:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#bananaPriceProductSelected {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 0; }
+
+.carrotCake {
+  width: 420px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin: 10px 70px 15px 0; }
+
+#carrotCakeProductSelect {
+  margin-left: 15px;
+  padding: 10px 0 10px 35px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #eaceb4;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #6a687a;
+  border: 2px solid #6a687a; }
+
+#carrotCakeProductSelect:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#carrotCakePriceButton {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4;
+  border: 2px solid #6a687a; }
+
+#carrotCakePriceButton:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#carrotCakePriceProductSelected {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 0; }
+
+.vanilaCake {
+  width: 420px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin: 10px 70px 15px 0; }
+
+#vanilaCakeProductSelect {
+  margin-left: 15px;
+  padding: 10px 0 10px 35px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #eaceb4;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat";
+  color: #6a687a;
+  border: 2px solid #6a687a; }
+
+#vanilaCakeProductSelect:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#vanilaCakePriceButton {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4;
+  border: 2px solid #6a687a; }
+
+#vanilaCakePriceButton:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  color: #ffffff; }
+
+#vanilaCakePriceProductSelected {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin-top: 0; }
+
+.contenedor-recetas {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row; }
+
+.imagen-recetas {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff; }
+
+.imagen-recetas:hover {
+  width: 280px;
+  height: 280px;
+  border-color: transparent;
+  transition: width 1s, height 1s; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: #ffffff; }
+
+.footer_contacto h3 {
+  font-family: "Style Script", cursive;
+  font-size: 40px;
+  margin-bottom: 0; }
+
+.footer_img img {
+  width: 50px;
+  height: 50px; }

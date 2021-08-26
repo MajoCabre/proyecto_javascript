@@ -1,0 +1,17 @@
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin estilo-fuentes($weight, $size, $family, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+@mixin posiciones-justify-content ($display, $justify-content){
+    display: $display;
+    justify-content: $justify-content;
+    
+}

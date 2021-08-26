@@ -1,0 +1,328 @@
+@import "variables.scss";
+@import "mixin.scss";
+
+html {
+    height: 100%;
+}
+body {
+    background-color: $color-fondo;
+    margin: 0;
+    min-height: 100%;
+}
+.carrito {
+    @include posiciones-justify-content(flex, flex-end);
+    margin: 15px;
+}
+.carrito img {
+    width: 60px;
+}
+.imagen_central {
+    @include posiciones-justify-content(flex, center);
+}
+.imagen_central img {
+    height: 350px;
+}
+header {
+    @include posiciones-justify-content(flex, space-evenly);
+}
+header h3 {
+    margin-top: 0;
+}
+header a {
+    font-family: $letra-cursiva;
+    font-size: 40px;
+    color: $color-letra;
+    text-decoration: none;
+}
+header a:hover {
+    color: $color-letra-hover;
+    text-decoration: underline;
+}
+.contenedor_img {
+    @include posiciones-justify-content(flex, space-around);
+}
+.contenedor_img img {
+    @include sizes(400px, 380px);
+    margin: 10px 0 15px 0;
+    border-radius: 10px;
+}
+.about_me {
+    color: $color-letra;
+}
+.about_me h2 {
+    font-family: $letra-cursiva;
+    font-size: 100px;
+    @include posiciones-justify-content(flex, center);
+    margin: 20px;
+}
+.about_me p {
+    @include posiciones-justify-content(flex, center);
+    font-family: $letra-texto;
+    font-size: 18px;
+    margin: 0 25px 20px 25px;
+}
+.container_torta {
+    @include posiciones-justify-content(flex, space-evenly);
+    flex-direction: row;
+}
+.chocotorta {
+    @include sizes(300px, 300px);
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin-bottom: 15px;
+}
+.texto_torta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto_torta h3 {
+    color: $color-letra;
+    font-size: 30px;
+    font-family: $letra-texto;
+    margin-left: 15px;
+}
+#chocotortaSelect {
+    margin-left: 15px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-fondo;
+    @include estilo-fuentes(bold, 20px, $letra-texto, $color-letra-hover);
+    border: 2px solid $color-letra-hover;
+}
+#chocotortaSelect:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#chocotortaPriceButton {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
+    border: 2px solid $color-letra-hover;
+}
+#chocotortaPriceButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#chocotortaPriceProductSelected {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin-top: 0;
+}
+.container-button {
+    display: flex;
+    flex-direction: row;
+}
+.carritoBoton {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
+    border: 2px solid $color-letra-hover;
+}
+.carritoBoton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#listCarrito {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin: 30px;
+    flex-direction: column;
+}
+#carritoVacio {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin-top: 0;
+}
+.redvelvet {
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin: 10px 0 15px 5px;
+}
+#redvelvetProductSelect {
+    margin-left: 15px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-fondo;
+    @include estilo-fuentes(bold, 20px, $letra-texto, $color-letra-hover);
+    border: 2px solid $color-letra-hover;
+}
+#redvelvetProductSelect:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#redvelvetPriceButton {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
+    border: 2px solid $color-letra-hover;
+}
+#redvelvetPriceButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#redvelvetPriceProductSelected {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin-top: 0;
+}
+.banana {
+    @include sizes(420px, 300px);
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin: 10px 25px 15px 0;
+}
+#bananaProductSelect {
+    margin-left: 15px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-fondo;
+    @include estilo-fuentes(bold, 20px, $letra-texto, $color-letra-hover);
+    border: 2px solid $color-letra-hover;
+}
+#bananaProductSelect:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#bananaPriceButton {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-letra-hover);
+    border: 2px solid $color-letra-hover;
+}
+#bananaPriceButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#bananaPriceProductSelected {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin-top: 0;
+}
+.carrotCake {
+    @include sizes(420px, 300px);
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin: 10px 70px 15px 0;
+}
+#carrotCakeProductSelect {
+    margin-left: 15px;
+    padding: 10px 0 10px 35px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-fondo;
+    @include estilo-fuentes(bold, 20px, $letra-texto, $color-letra-hover);
+    border: 2px solid $color-letra-hover;
+}
+#carrotCakeProductSelect:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#carrotCakePriceButton {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
+    border: 2px solid $color-letra-hover;
+}
+#carrotCakePriceButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#carrotCakePriceProductSelected {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin-top: 0;
+}
+.vanilaCake {
+    @include sizes(420px, 300px);
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin: 10px 70px 15px 0;
+}
+#vanilaCakeProductSelect {
+    margin-left: 15px;
+    padding: 10px 0 10px 35px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-fondo;
+    @include estilo-fuentes(bold, 20px, $letra-texto, $color-letra-hover);
+    border: 2px solid $color-letra-hover;
+}
+#vanilaCakeProductSelect:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#vanilaCakePriceButton {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
+    border: 2px solid $color-letra-hover;
+}
+#vanilaCakePriceButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
+#vanilaCakePriceProductSelected {
+    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, center);
+    margin-top: 0;
+}
+.contenedor-recetas {
+    @include posiciones-justify-content(flex, space-around);
+    flex-direction: row;
+}
+.imagen-recetas {
+    @include sizes(300px, 300px);
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+}
+.imagen-recetas:hover {
+    @include sizes(280px, 280px);
+    border-color: transparent;
+    transition: width 1s, height 1s;
+}
+footer {
+    @include posiciones-justify-content(flex, center);
+    color: $color-letra;
+}
+.footer_contacto h3 {
+    font-family: $letra-cursiva;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+.footer_img img {
+    @include sizes(50px, 50px);
+}
