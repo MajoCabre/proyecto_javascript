@@ -209,7 +209,7 @@ header a:hover {
     border-radius: 10px;
     outline: none;
     background-color: $color-letra-hover;
-    @include estilo-fuentes(bold, 25px, $letra-texto, $color-letra-hover);
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
     border: 2px solid $color-letra-hover;
 }
 #bananaPriceButton:hover {
