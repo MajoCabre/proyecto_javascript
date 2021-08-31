@@ -114,6 +114,7 @@ header a:hover {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
+    display: none
 }
 .container-button {
     display: flex;
@@ -182,6 +183,7 @@ header a:hover {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
+    display: none
 }
 .banana {
     @include sizes(420px, 300px);
@@ -221,6 +223,7 @@ header a:hover {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
+    display: none
 }
 .carrotCake {
     @include sizes(420px, 300px);
@@ -260,6 +263,7 @@ header a:hover {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
+    display: none
 }
 .vanilaCake {
     @include sizes(420px, 300px);
@@ -299,6 +303,7 @@ header a:hover {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
+    display: none
 }
 .contenedor-recetas {
     @include posiciones-justify-content(flex, space-around);

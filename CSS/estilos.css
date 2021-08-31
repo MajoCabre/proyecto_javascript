@@ -131,7 +131,8 @@ header a:hover {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  margin-top: 0; }
+  margin-top: 0;
+  display: none; }
 
 .container-button {
   display: flex;
@@ -220,7 +221,8 @@ header a:hover {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  margin-top: 0; }
+  margin-top: 0;
+  display: none; }
 
 .banana {
   width: 420px;
@@ -270,7 +272,8 @@ header a:hover {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  margin-top: 0; }
+  margin-top: 0;
+  display: none; }
 
 .carrotCake {
   width: 420px;
@@ -320,7 +323,8 @@ header a:hover {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  margin-top: 0; }
+  margin-top: 0;
+  display: none; }
 
 .vanilaCake {
   width: 420px;
@@ -370,7 +374,8 @@ header a:hover {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  margin-top: 0; }
+  margin-top: 0;
+  display: none; }
 
 .contenedor-recetas {
   display: flex;

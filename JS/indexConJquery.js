@@ -112,10 +112,16 @@ const getProductSelected = function (list, val) {
  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
  */
 
+ $("#chocotortaPriceButton").click(() => { 
+    $("#container-button").toggle("fast");
+});
+
+
 $("#chocotortaPriceButton").on("click", () => {
     const value = $("#chocotortaSelect").val();
     const chocotortaSelected = getProductSelected(chocotortaSize, value)
-    $("#chocotortaPriceProductSelected").html("El precio es: $" + chocotortaSelected.precio);
+    $("#chocotortaPriceProductSelected").fadeIn(2000).html("El precio es: $" + chocotortaSelected.precio);
+    // $("#chocotortaPriceProductSelected").fadeIn(1000)
 });
 
 // /**
@@ -211,6 +217,7 @@ $("#redvelvetPriceButton")
         const value = $("#redvelvetProductSelect").val();
         const redvelvetValueSelected = getProductSelected(redvelvetSize, value);
         $("#redvelvetPriceProductSelected").html("El precio es $" + redvelvetValueSelected.precio);
+        $("#redvelvetPriceProductSelected").fadeIn(1000)
 
     })
 
@@ -236,6 +243,7 @@ $("#bananaPriceButton")
         const value = $("#bananaProductSelect").val();
         const bananaValueSelected = getProductSelected(bananaSize, value);
         $("#bananaPriceProductSelected").html("El precio es $" + bananaValueSelected.precio);
+        $("#bananaPriceProductSelected").fadeIn(1000)
     })
 
 /**
@@ -260,6 +268,7 @@ $("#carrotCakePriceButton")
         const value = $("#carrotCakeProductSelect").val();
         const carrotCakeValueSelected = getProductSelected(carrotCakeSize, value);
         $("#carrotCakePriceProductSelected").html("El precio es $" + carrotCakeValueSelected.precio);
+        $("#carrotCakePriceProductSelected").fadeIn(1000)
     })
 
 /**
@@ -284,4 +293,5 @@ $("#vanilaCakePriceButton")
         const value = $("#vanilaCakeProductSelect").val();
         const vanilaCakeValueSelected = getProductSelected(vanilaCakeSize, value);
         $("#vanilaCakePriceProductSelected").html("El precio es $" + vanilaCakeValueSelected.precio);
+        $("#vanilaCakePriceProductSelected").fadeIn(1000)
     })
