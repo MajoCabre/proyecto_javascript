@@ -112,7 +112,7 @@ const getProductSelected = function (list, val) {
  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
  */
 
- $("#chocotortaPriceButton").click(() => { 
+$("#chocotortaPriceButton").click(() => {
     $("#container-button").toggle("fast");
 });
 

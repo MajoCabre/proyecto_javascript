@@ -12,9 +12,16 @@ body {
 .carrito {
     @include posiciones-justify-content(flex, flex-end);
     margin: 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5px;
 }
 .carrito img {
     width: 60px;
+}
+.container-carrito{
+    display: flex;
+    justify-content: center;
 }
 .imagen_central {
     @include posiciones-justify-content(flex, center);
@@ -96,7 +103,7 @@ header a:hover {
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
 }
-#chocotortaPriceButton {
+.container-button {
     margin: 20px 15px;
     padding: 10px;
     border-radius: 10px;
@@ -105,7 +112,7 @@ header a:hover {
     @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
     border: 2px solid $color-letra-hover;
 }
-#chocotortaPriceButton:hover {
+.container-button:hover {
     cursor: pointer;
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
@@ -114,25 +121,7 @@ header a:hover {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
-    display: none
-}
-.container-button {
-    display: flex;
-    flex-direction: row;
-}
-.carritoBoton {
-    margin: 20px 15px;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    background-color: $color-letra-hover;
-    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
-    border: 2px solid $color-letra-hover;
-}
-.carritoBoton:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 1px $color-sombra;
-    color: $color-letra;
+    display: none;
 }
 #listCarrito {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
@@ -165,25 +154,11 @@ header a:hover {
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
 }
-#redvelvetPriceButton {
-    margin: 20px 15px;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    background-color: $color-letra-hover;
-    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
-    border: 2px solid $color-letra-hover;
-}
-#redvelvetPriceButton:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 1px $color-sombra;
-    color: $color-letra;
-}
 #redvelvetPriceProductSelected {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
-    display: none
+    display: none;
 }
 .banana {
     @include sizes(420px, 300px);
@@ -205,25 +180,11 @@ header a:hover {
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
 }
-#bananaPriceButton {
-    margin: 20px 15px;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    background-color: $color-letra-hover;
-    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
-    border: 2px solid $color-letra-hover;
-}
-#bananaPriceButton:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 1px $color-sombra;
-    color: $color-letra;
-}
 #bananaPriceProductSelected {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
-    display: none
+    display: none;
 }
 .carrotCake {
     @include sizes(420px, 300px);
@@ -245,25 +206,11 @@ header a:hover {
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
 }
-#carrotCakePriceButton {
-    margin: 20px 15px;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    background-color: $color-letra-hover;
-    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
-    border: 2px solid $color-letra-hover;
-}
-#carrotCakePriceButton:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 1px $color-sombra;
-    color: $color-letra;
-}
 #carrotCakePriceProductSelected {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
-    display: none
+    display: none;
 }
 .vanilaCake {
     @include sizes(420px, 300px);
@@ -285,25 +232,11 @@ header a:hover {
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
 }
-#vanilaCakePriceButton {
-    margin: 20px 15px;
-    padding: 10px;
-    border-radius: 10px;
-    outline: none;
-    background-color: $color-letra-hover;
-    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
-    border: 2px solid $color-letra-hover;
-}
-#vanilaCakePriceButton:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 1px $color-sombra;
-    color: $color-letra;
-}
 #vanilaCakePriceProductSelected {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
-    display: none
+    display: none;
 }
 .contenedor-recetas {
     @include posiciones-justify-content(flex, space-around);

@@ -7,7 +7,7 @@ if (carrito) {
 
         $("#listCarrito").append(
             `<li>
-            "Usted compró: " ${element.nombre}";
+            Usted compró: ${element.nombre} con un costo de: $ ${element.precio}
         </li>`)
     })
 } else {

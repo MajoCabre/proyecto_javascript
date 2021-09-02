@@ -11,10 +11,38 @@ body {
 .carrito {
   display: flex;
   justify-content: flex-end;
-  margin: 15px; }
+  margin: 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5px; }
 
 .carrito img {
   width: 60px; }
+
+.container-carrito {
+  display: flex;
+  justify-content: center; }
+
+.container-button-carrito {
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #6a687a;
+  border: 2px solid #6a687a; }
+
+.container-button-carrito:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3); }
+
+.container-button-carrito {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4; }
+
+.container-button-carrito:hover {
+  color: #ffffff; }
 
 .imagen_central {
   display: flex;
@@ -107,7 +135,7 @@ header a:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
 
-#chocotortaPriceButton {
+.container-button {
   margin: 20px 15px;
   padding: 10px;
   border-radius: 10px;
@@ -119,7 +147,7 @@ header a:hover {
   color: #eaceb4;
   border: 2px solid #6a687a; }
 
-#chocotortaPriceButton:hover {
+.container-button:hover {
   cursor: pointer;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
@@ -133,27 +161,6 @@ header a:hover {
   justify-content: center;
   margin-top: 0;
   display: none; }
-
-.container-button {
-  display: flex;
-  flex-direction: row; }
-
-.carritoBoton {
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-  background-color: #6a687a;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Montserrat";
-  color: #eaceb4;
-  border: 2px solid #6a687a; }
-
-.carritoBoton:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  color: #ffffff; }
 
 #listCarrito {
   font-weight: bold;
@@ -197,23 +204,6 @@ header a:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
 
-#redvelvetPriceButton {
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-  background-color: #6a687a;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Montserrat";
-  color: #eaceb4;
-  border: 2px solid #6a687a; }
-
-#redvelvetPriceButton:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  color: #ffffff; }
-
 #redvelvetPriceProductSelected {
   font-weight: bold;
   font-size: 30px;
@@ -244,23 +234,6 @@ header a:hover {
   border: 2px solid #6a687a; }
 
 #bananaProductSelect:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  color: #ffffff; }
-
-#bananaPriceButton {
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-  background-color: #6a687a;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Montserrat";
-  color: #eaceb4;
-  border: 2px solid #6a687a; }
-
-#bananaPriceButton:hover {
   cursor: pointer;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
@@ -299,23 +272,6 @@ header a:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
 
-#carrotCakePriceButton {
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-  background-color: #6a687a;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Montserrat";
-  color: #eaceb4;
-  border: 2px solid #6a687a; }
-
-#carrotCakePriceButton:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  color: #ffffff; }
-
 #carrotCakePriceProductSelected {
   font-weight: bold;
   font-size: 30px;
@@ -346,23 +302,6 @@ header a:hover {
   border: 2px solid #6a687a; }
 
 #vanilaCakeProductSelect:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-  color: #ffffff; }
-
-#vanilaCakePriceButton {
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-  background-color: #6a687a;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Montserrat";
-  color: #eaceb4;
-  border: 2px solid #6a687a; }
-
-#vanilaCakePriceButton:hover {
   cursor: pointer;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
