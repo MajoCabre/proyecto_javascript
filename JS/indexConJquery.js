@@ -295,3 +295,28 @@ $("#vanilaCakePriceButton")
         $("#vanilaCakePriceProductSelected").html("El precio es $" + vanilaCakeValueSelected.precio);
         $("#vanilaCakePriceProductSelected").fadeIn(1000)
     })
+
+
+$(document).ready(() => {
+
+    //Escucho el evento click del botón agregado
+    $("#prueba").click(() => {
+
+        //Declaro la url que vamos a usar para el GET
+        const URLGET = "https://dog.ceo/api/breeds/image/random";
+
+        $.get(URLGET, (response) => {
+            const imgUrl = response.message;
+
+            //Compruebo si le estoy pegando al API con e console
+            console.log('Response %o', imgUrl)
+
+            //Imprimo con una imágen la pegada al API
+            $("#imageApi").append(
+                `<img class="torta-img-api" src="${imgUrl}">
+                </img>`
+            );
+        })
+    });
+
+});

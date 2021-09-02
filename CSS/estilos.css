@@ -19,30 +19,27 @@ body {
 .carrito img {
   width: 60px; }
 
-.container-carrito {
-  display: flex;
-  justify-content: center; }
-
 .container-button-carrito {
   margin: 20px 15px;
   padding: 10px;
   border-radius: 10px;
+  outline: none;
   background-color: #6a687a;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Montserrat";
+  color: #eaceb4;
   border: 2px solid #6a687a; }
 
 .container-button-carrito:hover {
   cursor: pointer;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3); }
-
-.container-button-carrito {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Montserrat";
-  color: #eaceb4; }
-
-.container-button-carrito:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
   color: #ffffff; }
+
+.container-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .imagen_central {
   display: flex;
@@ -118,6 +115,18 @@ header a:hover {
   font-family: "Montserrat";
   margin-left: 15px; }
 
+.torta-img {
+  width: 420px;
+  height: 300px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin: 10px 70px 15px 0; }
+
+.torta-img-api {
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  margin: 10px 70px 15px 0; }
+
 #chocotortaSelect {
   margin-left: 15px;
   padding: 10px 40px 10px 40px;
@@ -181,12 +190,6 @@ header a:hover {
   justify-content: center;
   margin-top: 0; }
 
-.redvelvet {
-  height: 300px;
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  margin: 10px 0 15px 5px; }
-
 #redvelvetProductSelect {
   margin-left: 15px;
   padding: 10px 30px 10px 30px;
@@ -213,13 +216,6 @@ header a:hover {
   justify-content: center;
   margin-top: 0;
   display: none; }
-
-.banana {
-  width: 420px;
-  height: 300px;
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  margin: 10px 25px 15px 0; }
 
 #bananaProductSelect {
   margin-left: 15px;
@@ -248,13 +244,6 @@ header a:hover {
   margin-top: 0;
   display: none; }
 
-.carrotCake {
-  width: 420px;
-  height: 300px;
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  margin: 10px 70px 15px 0; }
-
 #carrotCakeProductSelect {
   margin-left: 15px;
   padding: 10px 0 10px 35px;
@@ -281,13 +270,6 @@ header a:hover {
   justify-content: center;
   margin-top: 0;
   display: none; }
-
-.vanilaCake {
-  width: 420px;
-  height: 300px;
-  border-radius: 20px;
-  border: 2px solid #ffffff;
-  margin: 10px 70px 15px 0; }
 
 #vanilaCakeProductSelect {
   margin-left: 15px;

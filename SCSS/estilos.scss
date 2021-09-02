@@ -19,9 +19,24 @@ body {
 .carrito img {
     width: 60px;
 }
+.container-button-carrito {
+    margin: 20px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $color-letra-hover;
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-fondo);
+    border: 2px solid $color-letra-hover;
+}
+.container-button-carrito:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px $color-sombra;
+    color: $color-letra;
+}
 .container-carrito{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .imagen_central {
     @include posiciones-justify-content(flex, center);
@@ -89,6 +104,17 @@ header a:hover {
     font-family: $letra-texto;
     margin-left: 15px;
 }
+.torta-img{
+    @include sizes(420px, 300px);
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin: 10px 70px 15px 0;
+}
+.torta-img-api{
+    border-radius: 20px;
+    border: 2px solid $color-letra;
+    margin: 10px 70px 15px 0;
+}
 #chocotortaSelect {
     margin-left: 15px;
     padding: 10px 40px 10px 40px;
@@ -134,12 +160,6 @@ header a:hover {
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
 }
-.redvelvet {
-    height: 300px;
-    border-radius: 20px;
-    border: 2px solid $color-letra;
-    margin: 10px 0 15px 5px;
-}
 #redvelvetProductSelect {
     margin-left: 15px;
     padding: 10px 30px 10px 30px;
@@ -159,12 +179,6 @@ header a:hover {
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
     display: none;
-}
-.banana {
-    @include sizes(420px, 300px);
-    border-radius: 20px;
-    border: 2px solid $color-letra;
-    margin: 10px 25px 15px 0;
 }
 #bananaProductSelect {
     margin-left: 15px;
@@ -186,12 +200,6 @@ header a:hover {
     margin-top: 0;
     display: none;
 }
-.carrotCake {
-    @include sizes(420px, 300px);
-    border-radius: 20px;
-    border: 2px solid $color-letra;
-    margin: 10px 70px 15px 0;
-}
 #carrotCakeProductSelect {
     margin-left: 15px;
     padding: 10px 0 10px 35px;
@@ -211,12 +219,6 @@ header a:hover {
     @include posiciones-justify-content(flex, center);
     margin-top: 0;
     display: none;
-}
-.vanilaCake {
-    @include sizes(420px, 300px);
-    border-radius: 20px;
-    border: 2px solid $color-letra;
-    margin: 10px 70px 15px 0;
 }
 #vanilaCakeProductSelect {
     margin-left: 15px;
