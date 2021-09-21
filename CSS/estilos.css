@@ -38,8 +38,8 @@ body {
 
 .container-carrito {
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: row;
+  justify-content: center; }
 
 .imagen_central {
   display: flex;
@@ -94,7 +94,7 @@ header a:hover {
 
 .container_torta {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: row; }
 
 .chocotorta {
@@ -113,7 +113,13 @@ header a:hover {
   color: #ffffff;
   font-size: 30px;
   font-family: "Montserrat";
-  margin-left: 15px; }
+  margin-left: 15px;
+  background-color: #e79e85;
+  padding: 10px;
+  border-radius: 15px; }
+
+.section-torta {
+  width: 500px; }
 
 .torta-img {
   width: 420px;
@@ -171,15 +177,25 @@ header a:hover {
   margin-top: 0;
   display: none; }
 
-#listCarrito {
+.divCarrito {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Montserrat";
   color: #ffffff;
   display: flex;
-  justify-content: center;
-  margin: 30px;
-  flex-direction: column; }
+  justify-content: flex-start;
+  margin: 15px 10px;
+  background-color: #e79e85;
+  border-radius: 15px;
+  padding: 8px; }
+
+#parrafoCarrito {
+  margin: 20px; }
+
+.eliminarCarrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 #carritoVacio {
   font-weight: bold;
@@ -328,3 +344,137 @@ footer {
 .footer_img img {
   width: 50px;
   height: 50px; }
+
+#totalCar {
+  background-color: #e65b5b;
+  color: #ffffff;
+  font-size: "Style Script", cursive;
+  font-weight: bold;
+  border-radius: 100%;
+  padding: 8px;
+  height: 8px;
+  position: absolute;
+  width: 8px;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.titulo_recetas {
+  font-family: "Style Script", cursive;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  color: #bb5a5a; }
+
+.subtitulo_recetas {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Montserrat";
+  background-color: #e79e85;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center; }
+
+.preparacion {
+  color: #ffffff;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media (max-width: 600px) {
+  .contenedor_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contenedor_img img {
+    width: 200px;
+    height: 200px;
+    margin: 15px; }
+  .about_me h2 {
+    font-size: 35px; }
+  .about_me p {
+    font-size: 15px; }
+  .carrito img {
+    width: 40px; }
+  .imagen_central img {
+    height: 150px; }
+  .chocotorta {
+    height: 80px;
+    width: 80px;
+    margin-left: 20px; }
+  header a {
+    font-size: 20px; }
+  .texto_torta h3 {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 20px; }
+  .titulo_recetas {
+    font-size: 45px; }
+  .subtitulo_recetas {
+    font-size: 20px; }
+  .preparacion {
+    font-size: 15px; }
+  .preparacion li {
+    color: slategrey;
+    font-weight: bold; }
+  #chocotortaSelect {
+    margin-left: 0px;
+    margin-right: 20px;
+    font-size: 8px;
+    padding-left: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .container-button {
+    margin: 5px 0px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 10px; }
+  #redvelvetProductSelect {
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 8px; }
+  #bananaProductSelect {
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 8px; }
+  #carrotCakeProductSelect {
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 8px; }
+  #vanilaCakeProductSelect {
+    margin-left: 0px;
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 8px; }
+  .torta-img {
+    width: 100px;
+    height: 80px;
+    margin: 5px 5px 5px 20px; }
+  .container-button-carrito {
+    margin: 15px 5px;
+    padding: 5px;
+    font-size: 15px; }
+  .imagen-recetas {
+    width: 200px;
+    height: 200px;
+    margin: 15px; }
+  .contenedor-recetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .footer_contacto h3 {
+    font-size: 20px; }
+  .footer_img img {
+    width: 20px;
+    height: 20px; }
+  #parrafoCarrito {
+    font-size: 15px;
+    margin: 5px; } }

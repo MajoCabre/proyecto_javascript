@@ -33,10 +33,10 @@ body {
     box-shadow: 2px 2px 2px 1px $color-sombra;
     color: $color-letra;
 }
-.container-carrito{
+.container-carrito {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 .imagen_central {
     @include posiciones-justify-content(flex, center);
@@ -83,8 +83,9 @@ header a:hover {
     font-size: 18px;
     margin: 0 25px 20px 25px;
 }
+
 .container_torta {
-    @include posiciones-justify-content(flex, space-evenly);
+    @include posiciones-justify-content(flex, space-around);
     flex-direction: row;
 }
 .chocotorta {
@@ -103,14 +104,20 @@ header a:hover {
     font-size: 30px;
     font-family: $letra-texto;
     margin-left: 15px;
+    background-color: #e79e85;
+    padding: 10px;
+    border-radius: 15px;
 }
-.torta-img{
+.section-torta {
+    width: 500px;
+}
+.torta-img {
     @include sizes(420px, 300px);
     border-radius: 20px;
     border: 2px solid $color-letra;
     margin: 10px 70px 15px 0;
 }
-.torta-img-api{
+.torta-img-api {
     border-radius: 20px;
     border: 2px solid $color-letra;
     margin: 10px 70px 15px 0;
@@ -149,11 +156,21 @@ header a:hover {
     margin-top: 0;
     display: none;
 }
-#listCarrito {
-    @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
-    @include posiciones-justify-content(flex, center);
-    margin: 30px;
+.divCarrito {
+    @include estilo-fuentes(bold, 25px, $letra-texto, $color-letra);
+    @include posiciones-justify-content(flex, flex-start);
+    margin: 15px 10px;
+    background-color: #e79e85;
+    border-radius: 15px;
+    padding: 8px;
+}
+#parrafoCarrito {
+    margin: 20px;
+}
+.eliminarCarrito {
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 #carritoVacio {
     @include estilo-fuentes(bold, 30px, $letra-texto, $color-letra);
@@ -265,4 +282,166 @@ footer {
 }
 .footer_img img {
     @include sizes(50px, 50px);
+}
+
+#totalCar {
+    background-color: #e65b5b;
+    color: $color-letra;
+    font-size: $letra-cursiva;
+    font-weight: bold;
+    border-radius: 100%;
+    padding: 8px;
+    height: 8px;
+    position: absolute;
+    width: 8px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_recetas {
+    font-family: $letra-cursiva;
+    font-size: 100px;
+    @include posiciones-justify-content(flex, center);
+    margin: 20px;
+    color: $color-titulo-receta;
+}
+.subtitulo_recetas {
+    color: $color-letra;
+    font-size: 30px;
+    font-family: "Montserrat";
+    background-color: #e79e85;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+.preparacion {
+    color: $color-letra;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .contenedor_img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_img img {
+        width: 200px;
+        height: 200px;
+        margin: 15px;
+    }
+    .about_me h2 {
+        font-size: 35px;
+    }
+    .about_me p {
+        font-size: 15px;
+    }
+    .carrito img {
+        width: 40px;
+    }
+    .imagen_central img {
+        height: 150px;
+    }
+    .chocotorta {
+        height: 80px;
+        width: 80px;
+        margin-left: 20px;
+    }
+    header a {
+        font-size: 20px;
+    }
+    .texto_torta h3 {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .titulo_recetas{
+        font-size: 45px;
+    }
+    .subtitulo_recetas{
+        font-size: 20px;
+    }
+    .preparacion{
+        font-size: 15px
+    }
+    .preparacion li{
+        color: slategrey;
+        font-weight: bold;
+    }
+    #chocotortaSelect {
+        margin-left: 0px;
+        margin-right: 20px;
+        font-size: 8px;
+        padding-left: 8px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .container-button {
+        margin: 5px 0px;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+    #redvelvetProductSelect {
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 8px;
+    }
+    #bananaProductSelect {
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 8px;
+    }
+    #carrotCakeProductSelect {
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 8px;
+    }
+    #vanilaCakeProductSelect {
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 8px;
+    }
+    .torta-img {
+        width: 100px;
+        height: 80px;
+        margin: 5px 5px 5px 20px;
+    }
+    .container-button-carrito {
+        margin: 15px 5px;
+        padding: 5px;
+        font-size: 15px;
+    }
+    .imagen-recetas {
+        width: 200px;
+        height: 200px;
+        margin: 15px;
+    }
+    .contenedor-recetas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_contacto h3 {
+        font-size: 20px;
+    }
+    .footer_img img {
+        width: 20px;
+        height: 20px;
+    }
+    #parrafoCarrito {
+        font-size: 15px;
+        margin: 5px;
+    }
 }

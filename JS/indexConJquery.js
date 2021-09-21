@@ -55,7 +55,7 @@ const vanilaCakeS = new Producto('Vanila Cake mini (10-12 porciones)', 400, 15, 
 const vanilaCakeM = new Producto('Vanila Cake medium (16-18 porciones)', 600, 7, 1522);
 const vanilaCakeL = new Producto('Vanila Cake grande (18-22 porciones)', 1100, 9, 1581);
 
-/**
+/*
  * Creo mi array de productos
  */
 
@@ -99,7 +99,7 @@ chocotortaSize.forEach(chocotorta => {
     );
 });
 
-/**
+/*
  * Obtengo el producto seleccionado, creo una función que me retorne el nombre del producto  
  */
 
@@ -108,7 +108,7 @@ const getProductSelected = function (list, val) {
     return productSelected;
 }
 
-/**
+/*
  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
  */
 
@@ -121,28 +121,59 @@ $("#chocotortaPriceButton").on("click", () => {
     const value = $("#chocotortaSelect").val();
     const chocotortaSelected = getProductSelected(chocotortaSize, value)
     $("#chocotortaPriceProductSelected").fadeIn(2000).html("El precio es: $" + chocotortaSelected.precio);
-    // $("#chocotortaPriceProductSelected").fadeIn(1000)
 });
 
-// /**
-//  * Creo una función que me valide si hay algún producto en el local storage y si no lo hay, lo agrega
-//  */
+const updateTotalCar = function (carrito) {
+    let total = 0;
+
+    carrito.forEach((element) => {
+        total = total + element.cantidad;
+    });
+
+    $("#totalCar").html(`${total}`);
+}
+
+/*
+* Creo una función que me valide si hay algún producto en el local storage y si no lo hay, lo agrega
+*/
 
 const addToCar = function (product) {
     const carrito = localStorage.getItem('carrito');
 
+    let productToSave = {
+        product: product,
+        cantidad: 1
+    };
+
     if (carrito) {
         const carritoValue = JSON.parse(carrito);
-        carritoValue.push(product);
+
+        const productExist = carritoValue.find((value) => { return value.product.nombre === product.nombre });
+
+        if (productExist) {
+            productToSave = {
+                product: product,
+                cantidad: productExist.cantidad + 1
+            }
+
+            const index = carritoValue.findIndex((obj => obj.product.nombre === product.nombre));
+            carritoValue[index] = productToSave;
+
+        } else {
+            carritoValue.push(productToSave);
+        }
+
         localStorage.setItem("carrito", JSON.stringify(carritoValue));
+        updateTotalCar(carritoValue);
     } else {
-        localStorage.setItem("carrito", JSON.stringify([product]));
+        localStorage.setItem("carrito", JSON.stringify([productToSave]));
+        updateTotalCar([productToSave]);
     }
 }
 
-// /**
-//  * Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
-//  */
+/**
+  * Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
+*/
 
 $("#agregarAlCarritoChocotorta")
     .on("click", function () {
@@ -151,9 +182,9 @@ $("#agregarAlCarritoChocotorta")
         addToCar(productSelected);
     })
 
-// /**
-// * Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
-// */
+/**
+* Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
+*/
 
 $("#agregarAlCarritoRedVelvet")
     .on("click", function () {
@@ -162,9 +193,9 @@ $("#agregarAlCarritoRedVelvet")
         addToCar(productSelected);
     })
 
-// /**
-//  * Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
-//  */
+/**
+* Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
+*/
 
 $("#agregarAlCarritoBanana")
     .on("click", function () {
@@ -173,9 +204,9 @@ $("#agregarAlCarritoBanana")
         addToCar(productSelected);
     })
 
-// /**
-// * Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
-// */
+/**
+* Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
+*/
 
 $("#agregarAlCarritoCarrotCake")
     .on("click", function () {
@@ -184,9 +215,9 @@ $("#agregarAlCarritoCarrotCake")
         addToCar(productSelected);
     })
 
-// /**
-// * Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
-// */
+/**
+* Escucha el evento de mi html y creo una función que agrega a mi carrito el producto seleccionado
+*/
 
 $("#agregarAlCarritoVanila")
     .on("click", function () {
@@ -208,9 +239,9 @@ redvelvetSize.forEach(redvelvet => {
     );
 });
 
-// /**
-//  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
-//  */
+/**
+* Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
+*/
 
 $("#redvelvetPriceButton")
     .on("click", function () {
@@ -234,9 +265,9 @@ bananaSize.forEach(banana => {
     );
 });
 
-// /**
-//  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
-//  */
+/**
+* Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
+*/
 
 $("#bananaPriceButton")
     .on("click", function () {
@@ -259,9 +290,9 @@ carrotCakeSize.forEach(carrotCake => {
     );
 });
 
-// /**
-//  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
-//  */
+/**
+* Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
+*/
 
 $("#carrotCakePriceButton")
     .on("click", function () {
@@ -284,9 +315,9 @@ vanilaCakeSize.forEach(vanilaCake => {
     );
 });
 
-// /**
-//  * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
-//  */
+/**
+ * Escucho el click en el boton de precio y retorno un mensaje con el precio del preoducto seleccionado
+*/
 
 $("#vanilaCakePriceButton")
     .on("click", function () {
@@ -294,29 +325,4 @@ $("#vanilaCakePriceButton")
         const vanilaCakeValueSelected = getProductSelected(vanilaCakeSize, value);
         $("#vanilaCakePriceProductSelected").html("El precio es $" + vanilaCakeValueSelected.precio);
         $("#vanilaCakePriceProductSelected").fadeIn(1000)
-    })
-
-
-$(document).ready(() => {
-
-    //Escucho el evento click del botón agregado
-    $("#prueba").click(() => {
-
-        //Declaro la url que vamos a usar para el GET
-        const URLGET = "https://dog.ceo/api/breeds/image/random";
-
-        $.get(URLGET, (response) => {
-            const imgUrl = response.message;
-
-            //Compruebo si le estoy pegando al API con e console
-            console.log('Response %o', imgUrl)
-
-            //Imprimo con una imágen la pegada al API
-            $("#imageApi").append(
-                `<img class="torta-img-api" src="${imgUrl}">
-                </img>`
-            );
-        })
-    });
-
 });
